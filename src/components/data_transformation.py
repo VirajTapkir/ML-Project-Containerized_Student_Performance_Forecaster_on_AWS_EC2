@@ -2,7 +2,7 @@ import sys
 import os
 from dataclasses import dataclass
 import numpy as np
-import padndas as pd
+import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
@@ -35,7 +35,7 @@ class DataTransformation:
                     ("imputer", SimpleImputer(strategy="median"),
                      ("scaler", StandardScaler()))
                 ]
-                 
+
             )
         except:
             pass
